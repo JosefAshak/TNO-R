@@ -1,405 +1,358 @@
-fortress_norway_category = {
-	build_forts_oslo = {
-		icon = GFX_decision_generic_construction
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = NOR_is_not_building_forts
-				NOT = { has_country_flag = NOR_building_forts }
-			}
-		}
-		visible = {
-			always = yes
-		}
+ideas = {
+	country = {
+		NOR_byzantine_politics = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_byzantine_politics" }
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			removal_cost = -1
 
-		cost = 5
-		fire_only_once = yes
-		days_remove = 70
-
-		highlight_states = {
-			state = 897
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision build_forts_oslo"
-			set_country_flag = NOR_building_forts
-		}
-		remove_effect = {
-			add_political_power = 10
-			add_war_support = 0.005
-			897 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = radar_station
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = build_forts_oslo_tooltip
-			add_timed_idea = { idea = build_forts_oslo_misc_costs days = 90 }
-			hidden_effect = {
-				897 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 6115
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						instant_build = yes
-						province = 6115
-					}
-				}
-			}
-			clr_country_flag = NOR_building_forts
-		}
-		ai_will_do = {
-			base = 1
-		}
-	}
-	build_forts_telemark = {
-		icon = GFX_decision_generic_construction
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = NOR_is_not_building_forts
-				NOT = { has_country_flag = NOR_building_forts }
-			}
-		}
-		visible = {
-			always = yes
-		}
-
-		highlight_states = {
-			state = 899
-		}
-
-		cost = 5
-		fire_only_once = yes
-		days_remove = 40
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision build_forts_telemark"
-			set_country_flag = NOR_building_forts
-		}
-		remove_effect = {
-			add_political_power = 10
-			add_war_support = 0.005
-			custom_effect_tooltip = build_forts_telemark_tooltip
-			add_timed_idea = { idea = build_forts_telemark_misc_costs days = 90 }
-			hidden_effect = {
-				899 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 11029
-					}
-				}
-			}
-			clr_country_flag = NOR_building_forts
-		}
-		ai_will_do = {
-			base = 1
-		}
-	}
-	build_forts_agder = {
-		icon = GFX_decision_generic_construction
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = NOR_is_not_building_forts
-				NOT = { has_country_flag = NOR_building_forts }
-			}
-		}
-		visible = {
-			always = yes
-		}
-
-		cost = 5
-		fire_only_once = yes
-		days_remove = 50
-
-		highlight_states = {
-			state = 898
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision build_forts_agder"
-			set_country_flag = NOR_building_forts
-		}
-		remove_effect = {
-			add_political_power = 10
-			add_war_support = 0.005
-			custom_effect_tooltip = build_forts_agder_tooltip
-			add_timed_idea = { idea = build_forts_agder_misc_costs days = 90 }
-			hidden_effect = {
-				898 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 9296
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						instant_build = yes
-						province = 9296
-					}
-				}
-			}
-			clr_country_flag = NOR_building_forts
-		}
-		ai_will_do = {
-			base = 1
-		}
-	}
-	build_forts_vestlandet = {
-		icon = GFX_decision_generic_construction
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = NOR_is_not_building_forts
-				NOT = { has_country_flag = NOR_building_forts }
-			}
-		}
-		visible = {
-			always = yes
-		}
-
-		highlight_states = {
-			state = 142
-		}
-
-		cost = 5
-		fire_only_once = yes
-		days_remove = 60
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision build_forts_vestlandet"
-			set_country_flag = NOR_building_forts
-		}
-		remove_effect = {
-			add_political_power = 10
-			add_war_support = 0.005
-			142 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = build_forts_vestlandet_tooltip
-			add_timed_idea = { idea = build_forts_vestlandet_misc_costs days = 90 }
-			hidden_effect = {
-				142 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 6176
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						instant_build = yes
-						province = 6176
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 122
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						instant_build = yes
-						province = 122
-					}
-				}
-			}
-			clr_country_flag = NOR_building_forts
-		}
-		ai_will_do = {
-			base = 1
-		}
-	}
-	build_forts_trondelag = {
-		icon = GFX_decision_generic_construction
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = NOR_is_not_building_forts
-				NOT = { has_country_flag = NOR_building_forts }
-			}
-		}
-		visible = {
-			always = yes
-		}
-
-		cost = 5
-		fire_only_once = yes
-		days_remove = 60
-
-		highlight_states = {
-			state = 143
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision build_forts_trondelag"
-			set_country_flag = NOR_building_forts
-		}
-		remove_effect = {
-			add_political_power = 10
-			add_war_support = 0.005
-			143 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = build_forts_trondelag_tooltip
-			add_timed_idea = { idea = build_forts_trondelag_misc_costs days = 90 }
-			hidden_effect = {
-				143 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 21
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						instant_build = yes
-						province = 21
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes
-						province = 3022
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						instant_build = yes
-						province = 3022
-					}
-				}
-			}
-			clr_country_flag = NOR_building_forts
-		}
-		ai_will_do = {
-			base = 1
-		}
-	}
-}
-
-NOR_militia_category = {
-	NOR_raise_militia = {
-		icon = GFX_decision_generic_prepare_civil_war
-		available = {
-			has_war = yes
-			NOT = { has_country_flag = NOR_raised_national_militia }
-		}
-		visible = {
-			always = yes
-		}
-
-		cost = 5
-		days_remove = 21
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision norway_raise_militia"
-			division_template = {
-				name = "Heimevernet"
-				priority = 1
-				is_locked = yes
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-					infantry = { x = 0 y = 3 }
-					infantry = { x = 0 y = 4 }
-				}
-				support = {
-					recon = { x = 0 y = 0 }
-					military_police = { x = 0 y = 1 }
-				}
-			}
-		}
-		remove_effect = {
-			set_country_flag = NOR_raised_national_militia
-			897 = {
-				create_unit = {
-					division = "name = \"Heimevernet-01\" division_template = \"Heimevernet\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-					prioritize_location = 6115
-					owner = NOR
-				}
-			}
-			142 = {
-				create_unit = {
-					division = "name = \"Heimevernet-02\" division_template = \"Heimevernet\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-					prioritize_location = 6176
-					owner = NOR
-				}
-				create_unit = {
-					division = "name = \"Heimevernet-03\" division_template = \"Heimevernet\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-					prioritize_location = 122
-					owner = NOR
-				}
-			}
-			143 = {
-				create_unit = {
-					division = "name = \"Heimevernet-04\" division_template = \"Heimevernet\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-					prioritize_location = 3022
-					owner = NOR
-				}
-			}
-		}
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	NOR_demobilize_militia = {
-		icon = GFX_decision_generic_form_nation
-		allowed = {
-			tag = NOR
-		}
-		available = {
-			has_war = no
-		}
-		activation = {
-			has_country_flag = NOR_raised_national_militia
-			has_war = no
-		}
-
-		days_mission_timeout = 7
-		days_re_enable = 7
-		is_good = yes
-
-		cancel_trigger = {
-			hidden_trigger = {
-				has_war = yes
+			modifier = {
+				political_power_cost = 0.15
+				stability_factor = -0.15
 			}
 		}
 
-		complete_effect = {
-			add_political_power = 5
-			clr_country_flag = NOR_raised_national_militia
-			delete_unit_template_and_units = {
-				division_template = "Heimevernet"
+		NOR_sami_issue = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_sami_issue" }
+			picture = saf_history_of_segregation
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				political_power_cost = 0.05
+				conscription_factor = -0.03
 			}
 		}
 
-		ai_will_do = {
-			factor = 1
+		NOR_nsfo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_nsfo" }
+			picture = generic_volunteer_expedition_bonus
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		NOR_dormant_resistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_dormant_resistance" }
+			picture = generic_spy_political
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		NOR_dual_military = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_dual_military" }
+			picture = generic_infantry_bonus
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.01
+				army_org_factor = -0.1
+				planning_speed = -0.1
+			}
+		}
+
+		NOR_staggering_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_staggering_economy" }
+			picture = great_depression
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_use_modifier = 0.15
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		NOR_the_overstayed_occupation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_the_overstayed_occupation" }
+			picture = NOR_the_overstayed_occupation
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.50
+				stability_factor = -0.15
+			}
+		}
+
+		NOR_Milorg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_Milorg" }
+			picture = NOR_milorg
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.25
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		NOR_Weakened_Milorg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_Weakened_Milorg" }
+			picture = NOR_milorg
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		NOR_argricultural_devolution = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_argricultural_devolution" }
+			picture = NOR_agricultural_devolution
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.15
+				consumer_goods_use_modifier = 0.15
+			}
+		}
+
+		NOR_initial_recovery = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_initial_recovery" }
+			picture = NOR_agricultural_devolution
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.10
+				consumer_goods_use_modifier = 0.10
+			}
+		}
+
+		NOR_collab_purge = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_collab_purge" }
+			picture = shadow_economy
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = 0.1
+				socialist_drift = 0.1
+				progressivism_drift = 0.25
+				liberalism_drift = 0.15
+				conservatism_drift = 0.2
+			}
+		}
+
+		NOR_Olav_V = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_Olav_V" }
+			picture = NOR_king_olav_V
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		NOR_rebuilding_norway = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_rebuilding_norway" }
+			picture = MGN_supply_production
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 250
+				stability_weekly = 0.003
+				industry_repair_factor = 0.3
+				industry_free_repair_factor = 0.3
+			}
+		}
+
+		NOR_protect_norway = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_protect_norway" }
+			picture = URL_volunteer_militia_programs
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				mobilization_speed = 0.1
+				defensive_war_stability_factor = 0.5
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		NOR_elite_army_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_elite_army_1" }
+			picture = TNO_winter_soldier
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				dig_in_speed = 1
+				no_supply_grace = 48
+				out_of_supply_factor = -0.1
+				minimum_training_level = 0.2
+			}
+		}
+		NOR_elite_army_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_elite_army_1" }
+			picture = URL_militias_fully_integrated
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				max_dig_in = 1.5
+				dig_in_speed = 1
+				no_supply_grace = 48
+				out_of_supply_factor = -0.1
+				minimum_training_level = 0.2
+			}
+		}
+		NOR_american_advisors_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_american_advisors_idea" }
+			picture = GER_american_advisors
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				training_time_factor = -0.15
+				mobilization_speed = 0.15
+				experience_gain_army_factor = 0.2
+				command_power_gain_mult = 0.2
+			}
+		}
+		NOR_coup_aftermath = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_coup_aftermath" }
+			picture = WEST_AFRICA_obliterated_infrastructures
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				political_power_factor = -0.1
+				max_command_power = -0.5
+				command_power_gain = -0.25
+				mobilization_speed = -0.1
+				weekly_manpower = -25
+			}
+		}
+		NOR_consolidation_of_power = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_consolidation_of_power" }
+			picture = SVR_Inside_the_Machine
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				national_socialism_drift = 0.2
+				fascism_drift = 0.1
+				political_power_gain = 0.2
+				stability_factor = -0.25
+				# war_support_factor = -0.25
+				command_power_gain = -0.25
+				weekly_manpower = -75
+			}
+		}
+
+		#German-Norwegian Conference results
+		NOR_BOR_conference_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_BOR_conference_1" }
+			picture = SVR_Intelligence_Leaks
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_dockyard_factor = -0.15
+				consumer_goods_use_modifier = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				#TODOTRADEMODIFIER
+			}
+		}
+		NOR_BOR_conference_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_BOR_conference_2" }
+			picture = SVR_Intelligence_Leaks
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_dockyard_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				#TODOTRADEMODIFIER
+			}
+		}
+		NOR_BOR_conference_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_BOR_conference_3" }
+			picture = SVR_Intelligence_Leaks
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_dockyard_factor = -0.1
+				consumer_goods_use_modifier = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				#TODOTRADEMODIFIER
+			}
+		}
+		NOR_BOR_conference_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_BOR_conference_4" }
+			picture = SVR_Intelligence_Leaks
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_dockyard_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				#TODOTRADEMODIFIER
+			}
+		}
+
+		NOR_Bind_To_The_Reichmark = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NOR_BOR_conference_4" }
+			picture = SVR_Intelligence_Leaks
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				GDP_to_sphere_leader_modifier = 0.015
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
 		}
 	}
 }

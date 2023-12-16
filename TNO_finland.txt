@@ -1,182 +1,103 @@
-FIN_winter_war = {
+ideas = {
+	country = {
+		
+		FIN_An_Unsatisfactory_Answer = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FIN_An_Unsatisfactory_Answer"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
 
-	FIN_demand_ceasefire = {
+			picture = FIN_an_unsatisfactory_answer
 
-		icon = GFX_decision_generic_form_nation
-
-		available = {
-			has_global_flag = KARELIAN_WAR_FORCE_PEACE
-			NOT = { surrender_progress > 0.20 }
-		}
-
-		visible = {
-			OR = {
-				has_war_with = WSR
-				has_war_with = WSB
-				has_war_with = SIB
+			modifier = {
+				stability_factor = -0.10
+				resistance_growth = 0.05
+				war_support_factor = 0.05
 			}
 		}
-
-		custom_cost_trigger = { always = yes } #no cost
-
-		days_re_enable = 90
-
-		fire_only_once = no
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision FIN_offer_ceasefire"
-			if = {
-				limit = { WSR = { exists = yes } }
-				WSR = {
-					country_event = {
-						id = murmansk_peace.6
-						days = 3
-					}
-				}
+		
+		FIN_Second_Crisis_Of_Democracy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FIN_Second_Crisis_Of_Democracy"}
+			allowed = {
+				always = no
 			}
-			else_if = {
-				limit = {
-					WSB = { exists = yes }
-				}
-				WSB = {
-					country_event = {
-						id = murmansk_peace.6
-						days = 3
-					}
-				}
+			allowed_civil_war = {
+				always = yes
 			}
-			else = {
-				SIB = {
-					country_event = {
-						id = murmansk_peace.6
-						days = 3
-					}
-				}
+			removal_cost = -1
+
+			picture = FRA_200_families_vanquished
+
+			modifier = {
+				drift_defence_factor = -0.20
+				political_power_factor = -0.10
+				modifier_army_sub_unit_light_infantry_defence_factor = 0.25
+				modifier_army_sub_unit_light_infantry_training_time_factor = 0.15
+				personnel_cost_modifier = -0.05
+				conscription = 0.025
+				fascism_acceptance = 25
+				national_socialism_acceptance = 25
 			}
-			clr_global_flag = KARELIAN_WAR_FORCE_PEACE
 		}
+		
+		FIN_The_Growth_Regime = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FIN_The_Growth_Regime"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
 
-		ai_will_do = {
-			factor = 50
-		}
-	}
+			picture = FIN_the_growth_regime
 
-	FIN_offer_limited_surrender = {
-
-		icon = GFX_decision_generic_form_nation
-
-		available = {
-			surrender_progress > 0.20
-			NOT = { surrender_progress > 0.50 }
-		}
-
-		visible = {
-			OR = {
-				has_war_with = WSR
-				has_war_with = WSB
-				has_war_with = SIB
+			modifier = {
+				gdp_growth_modifier = 0.02
+				production_speed_buildings_factor = 0.15
+				production_units_to_GDP_ratio_modifier = 0.10
 			}
 		}
 
-		custom_cost_trigger = { always = yes } #no cost
-
-		days_re_enable = 90
-
-		fire_only_once = no
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision FIN_offer_limited_surrender"
-			if = {
-				limit = { WSR = { exists = yes } }
-				WSR = {
-					country_event = {
-						id = murmansk_peace.3
-						days = 3
-					}
-				}
+		FIN_Accelerated_Training = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FIN_Accelerated_Training"}
+			allowed = {
+				always = no
 			}
-			else_if = {
-				limit = {
-					WSB = { exists = yes }
-				}
-				WSB = {
-					country_event = {
-						id = murmansk_peace.3
-						days = 3
-					}
-				}
+			allowed_civil_war = {
+				always = yes
 			}
-			else = {
-				SIB = {
-					country_event = {
-						id = murmansk_peace.3
-						days = 3
-					}
-				}
+			removal_cost = -1
+
+			picture = KRK_Inexperienced_Army
+
+			modifier = {
+				training_time_factor = -0.10
+				planning_speed = -0.05
 			}
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
-	FIN_offer_unconditional_surrender = {
-
-		icon = GFX_decision_generic_form_nation
-
-		available = {
-			surrender_progress > 0.50
-		}
-
-		visible = {
-			OR = {
-				has_war_with = WSR
-				has_war_with = WSB
-				has_war_with = SIB
+		FIN_Nyet_Vinjaya = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FIN_Nyet_Vinjaya"}
+			allowed = {
+				always = no
 			}
-		}
-
-		custom_cost_trigger = { always = yes } #no cost
-
-		days_re_enable = 90
-
-		fire_only_once = yes
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision FIN_offer_unconditional_surrender"
-			if = {
-				limit = { WSR = { exists = yes } }
-				WSR = {
-					country_event = {
-						id = murmansk_peace.1
-						days = 3
-					}
-				}
+			allowed_civil_war = {
+				always = yes
 			}
-			else_if = {
-				limit = {
-					WSB = { exists = yes }
-				}
-				WSB = {
-					country_event = {
-						id = murmansk_peace.1
-						days = 3
-					}
-				}
-			}
-			else = {
-				SIB = {
-					country_event = {
-						id = murmansk_peace.1
-						days = 3
-					}
-				}
-			}
-		}
+			removal_cost = -1
 
-		ai_will_do = {
-			factor = 200
+			picture = MGN_army_good
+
+			modifier = {
+				army_morale_factor = 0.3
+				army_core_defence_factor = 0.2
+				conscription_factor = 0.1
+			}
 		}
 	}
 }
