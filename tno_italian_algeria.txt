@@ -1,12 +1,12 @@
 focus_tree = {
-	id = DST_civil_war
+	id = ilg_opening
 	country = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = DST
+			tag = ILG
 		}
 	}
 	default = no
-	shared_focus = DST_the_rightful_heir
+	shared_focus = ILG_state_of_algeria
 }
